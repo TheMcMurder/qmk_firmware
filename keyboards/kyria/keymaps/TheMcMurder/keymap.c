@@ -26,6 +26,7 @@ enum layers {
 #define OSHL_UP MT(TG(_RAISE),OSL(_RAISE))
 #define OSHL_LO MT(TG(_LOWER),OSL(_LOWER))
 #define ADJ_GRV LT(_ADJUST, KC_GRV)
+#define LO__A LT(_LOWER, KC_A)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
@@ -34,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,------------------------------------------------.                                  ,------------------------------------------------.
  * |ADJUST/`|   Q   |   W   |    E  |   R   |   T   |                                  |   Y   |   U   |   I   |   O   |   P   |  MUTE  |
  * |--------+-------+-------+-------+-------+-------|                                  |-------+-------+-------+-------+-------+--------|
- * |Ctrl/ESC|   A   |   S   |  D    |   F   |   G   |                                  |   H   |   J   |   K   |   L   | ;   : |  ' "   |
+ * |Ctrl/ESC|Lower/A|   S   |  D    |   F   |   G   |                                  |   H   |   J   |   K   |   L   | ;   : |  ' "   |
  * |--------+-------+-------+-------+-------+-------+---------------.  ,---------------+-------+-------+-------+-------+-------+--------|
  * | LShift |   Z   |   X   |   C   |   V   |   B   |   {   |       |  |       |   }   |   N   |   M   | ,   < |  . >  |  /  ? |  - _   |
  * `------------------------+-------+-------+-------+-------+-------|  |-------+-------+-------+-------+-------+----------------------'
@@ -44,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_QWERTY] = LAYOUT(
     ADJ_GRV ,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                      KC_Y,   KC_U,   KC_I,   KC_O,   KC_P, KC_MUTE,
-    ESC_CTL ,   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                      KC_H,   KC_J,   KC_K,   KC_L,KC_SCLN, KC_QUOT,
+    ESC_CTL ,  LO__A,   KC_S,   KC_D,   KC_F,   KC_G,                                      KC_H,   KC_J,   KC_K,   KC_L,KC_SCLN, KC_QUOT,
     KC_LSFT ,   KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,KC_LCBR,_______,   _______,KC_RCBR,   KC_N,   KC_M,KC_COMM, KC_DOT,KC_SLSH, KC_MINS,
                              KC_LOPT,OSHL_LO,KC_LGUI,KC_BSPC, KC_TAB,    KC_ENT, KC_SPC,KC_RGUI,OSHL_UP, KC_RALT
     ),
