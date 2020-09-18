@@ -35,6 +35,7 @@ enum macro_keycodes {
 #define LO__SPC LT(_LOWER, KC_SPC)
 #define L_BRAC KC_LBRACKET
 #define R_BRAC KC_RBRACKET
+#define AD_BCK LT(_ADJUST, KC_BSPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT( \
@@ -45,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,  KC_TAB, KC_BSPC,    LO__SPC,  KC_ENT, KC_RALT \
+                                          KC_LGUI,  KC_TAB,  AD_BCK,    LO__SPC,  KC_ENT, KC_RALT \
                                       //`--------------------------'  `--------------------------'
 
   ),
