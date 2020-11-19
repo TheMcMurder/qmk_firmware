@@ -24,6 +24,7 @@ enum layers {
 
 #define ESC_CTL CTL_T(KC_ESC)
 #define UP__A LT(_RAISE, KC_A)
+#define LW_SEMI LT(_LOWER, KC_SCLN)
 #define RGBRMOD RGB_RMOD
 #define RGB_SNA RGB_M_SN
 #define RGB_SWI RGB_M_SW
@@ -40,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,------------------------------------------------.                                  ,------------------------------------------------.
  * | Delete |   Q   |   W   |    E  |   R   |   T   |                                  |   Y   |   U   |   I   |   O   |   P   |  - _   |
  * |--------+-------+-------+-------+-------+-------|                                  |-------+-------+-------+-------+-------+--------|
- * |Ctrl/ESC|Upper/A|   S   |  D    |   F   |   G   |                                  |   H   |   J   |   K   |   L   | ;   : |  ' "   |
+ * |Ctrl/ESC|Upper/A|   S   |  D    |   F   |   G   |                                  |   H   |   J   |   K   |   L   |LOW/;: |  ' "   |
  * |--------+-------+-------+-------+-------+-------+---------------.  ,---------------+-------+-------+-------+-------+-------+--------|
  * | LShift |   Z   |   X   |   C   |   V   |   B   |   {   |       |  |       |   }   |   N   |   M   | ,   < |  . >  |  /  ? |   `    |
  * `------------------------+-------+-------+-------+-------+-------|  |-------+-------+-------+-------+-------+----------------------'
@@ -50,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_QWERTY] = LAYOUT(
     KC_DEL  ,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                      KC_Y,   KC_U,   KC_I,   KC_O,   KC_P, KC_MINS,
-    ESC_CTL ,  UP__A,   KC_S,   KC_D,   KC_F,   KC_G,                                      KC_H,   KC_J,   KC_K,   KC_L,KC_SCLN, KC_QUOT,
+    ESC_CTL ,  UP__A,   KC_S,   KC_D,   KC_F,   KC_G,                                      KC_H,   KC_J,   KC_K,   KC_L,LW_SEMI, KC_QUOT,
     KC_LSFT ,   KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,KC_LCBR,_______,   _______,KC_RCBR,   KC_N,   KC_M,KC_COMM, KC_DOT,KC_SLSH,  KC_GRV,
                              KC_LOPT,OSM_LOW,KC_LGUI,KC_BSPC, KC_TAB,    KC_ENT, KC_SPC,KC_RGUI, OSM_UP, KC_RALT
     ),
